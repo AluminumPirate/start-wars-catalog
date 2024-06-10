@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{ data.movie.title }}</h1>
+<div mat-dialog-content>
+  <p><strong>Release Date:</strong> {{ data.movie.release_date }}</p>
+  <p><strong>Opening Crawl:</strong> {{ data.movie.opening_crawl }}</p>
+  <p><strong>Director:</strong> {{ data.movie.director }}</p>
+  <p><strong>Producer:</strong> {{ data.movie.producer }}</p>
+  <mat-divider style="margin: 10px"></mat-divider>
+
+  <p><strong>Characters:</strong></p>
+  <div *ngFor="let characterUrl of data.movie.characters">
+    <button mat-button (click)="openCharacterDetails(characterUrl)">
+      {{ characterNames[characterUrl] || "Loading..." }}
+    </button>
+  </div>
+</div>

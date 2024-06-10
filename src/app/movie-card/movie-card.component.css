@@ -1,0 +1,10 @@
+.movie-card {
+    height: 200px;
+    max-width: 400px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
